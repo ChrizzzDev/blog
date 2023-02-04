@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkDownPostLayout.astro
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Mi cuarta entrada en el blog
 author: Chriz
 description: "¡Este post aparecerá solo!"
