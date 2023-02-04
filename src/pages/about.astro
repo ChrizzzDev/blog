@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const identify = {
+  firstName: "Hector",
+  lastName: "Morett",
+  country: "México",
+  occupation: "Estudiante",
+  hobbies: ["Programar", "Escuchar música", "Estudiar matemáticas"],
+};
+
+const skills = [
+  "JavaScript",
+  "TypeScript",
+  "Dart",
+  "Ruby",
+  "Python",
+  "Bash",
+  "Astro",
+];
+
+const skillColor = 'navy';
+const pageTitle = "Acerca de";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <h1>Sobre mí</h1>
+    <style define:vars={{skillColor}}>
+      h1 {
+        color: purple;
+        font-size: 4rem;
+      }
+      .skill {
+        color: var(--skillColor);
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    </style>
+    <h2>... y mi nuevo sitio Astro!</h2>
+
+    <p>
+      Estoy trabajando en el tutorial introductorio de Astro. Esta es la segunda
+      página de mi sitio web, y es la primera que he construido yo mismo!
+    </p>
+    <p>
+      <p>
+        Este sitio se actualizará a medida que complete más del tutorial, así
+        que sigue revisando y ve cómo va mi viaje!
+      </p>
+    </p>
+    <p>Aquí hay unos datos sobre mí:</p>
+    <ul>
+      <li id="name">Mi nombre es {identify.firstName} {identify.lastName}</li>
+      <li id="about-me">
+        Vivo en {identify.country} y tengo la ocupación de {
+          identify.occupation
+        }.
+      </li>
+    </ul>
+    <ul id="hobbies">
+    <p>Mis hobbies son:</p>
+    {
+      identify.hobbies.map((hobbie) => {
+        return <li class="hobbie">{hobbie}</li>;
+      })
+    }
+    </ul>
+    <p>Tengo habilidades en:</p>
+    <ul>
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
+    </ul>
+</BaseLayout>

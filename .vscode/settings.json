@@ -1,0 +1,7 @@
+{
+  "editor.fontFamily": "'CaskaydiaCove NFM Regular', monospace",
+  "editor.fontLigatures": true,
+  "astro.css.completions.enabled": true,
+  "astro.html.completions.emmet": true,
+  "commentTranslate.targetLanguage": "es"
+}
